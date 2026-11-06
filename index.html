@@ -79,7 +79,8 @@ nav a:hover::after{width:100%}
 /* Hero */
 .hero{background:radial-gradient(1200px 700px at 85% -10%,var(--marine-soft) 0%,var(--marine) 45%,var(--marine-dark) 100%);color:#fff;padding:96px 0 130px;position:relative;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background-image:radial-gradient(rgba(255,255,255,.05) 1px,transparent 1px);background-size:26px 26px;pointer-events:none}
-.hero .wrap{position:relative;max-width:920px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:64px;align-items:center}
+.hero-visual{justify-self:end;width:100%;max-width:440px}
 .hero .kicker{color:var(--kupfer-hell)}
 .hero .kicker::before{background:var(--kupfer-hell)}
 .hero h1{color:#fff;font-size:clamp(2.3rem,5vw,3.7rem);font-weight:800;margin-bottom:24px}
@@ -90,7 +91,8 @@ nav a:hover::after{width:100%}
 .hero-trust span{display:flex;align-items:center;gap:7px}
 .hero-trust b{color:var(--kupfer-hell)}
 .hero-visual{position:relative}
-.hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);transform:translateY(0);will-change:transform}
+.hero-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 40px 90px rgba(0,0,0,.45);aspect-ratio:4/5;max-height:600px}
+.hero-img picture,.hero-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
 .hero-img img{width:100%;aspect-ratio:4/5;object-fit:cover}
 .float-card{position:absolute;left:-40px;bottom:36px;background:rgba(255,255,255,.97);color:var(--text);border-radius:16px;padding:18px 22px;max-width:270px;box-shadow:0 24px 60px rgba(0,0,0,.35);animation:floaty 5.5s ease-in-out infinite}
 .float-card b{font-family:'Manrope',sans-serif;color:var(--marine);display:block;margin-bottom:4px;font-size:.95rem}
@@ -128,7 +130,8 @@ nav a:hover::after{width:100%}
 .why h2,.why h3{color:#fff}
 .why .wrap{display:grid;grid-template-columns:.95fr 1.05fr;gap:70px;align-items:center;position:relative}
 .why-img{border-radius:var(--radius);overflow:hidden;box-shadow:0 30px 80px rgba(0,0,0,.4)}
-.why-img img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform 1.2s var(--ease)}
+.why-img picture{display:block;aspect-ratio:4/5}
+.why-img img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 20%;transition:transform 1.2s var(--ease)}
 .why-img:hover img{transform:scale(1.04)}
 .img-placeholder{aspect-ratio:4/5;background:linear-gradient(160deg,var(--marine-soft),var(--marine-dark));display:flex;align-items:center;justify-content:center;text-align:center;color:#7E97AE;font-family:'Manrope',sans-serif;font-weight:600;letter-spacing:.1em;font-size:.85rem;line-height:2;padding:24px}
 .why .lead{color:#BECDDD}
@@ -238,7 +241,7 @@ footer a:hover{color:var(--kupfer-hell)}
   section{padding:72px 0}
   .hero .wrap,.why .wrap,.contact .wrap{grid-template-columns:1fr}
   .hero{padding:64px 0 90px}
-  .hero-visual{max-width:460px}
+  .hero-visual{max-width:420px;margin:0 auto;justify-self:center}
   .float-card{left:10px}
   .stats .wrap{grid-template-columns:1fr 1fr}
   .stat{border:none;padding:16px}
@@ -297,6 +300,14 @@ footer a:hover{color:var(--kupfer-hell)}
         <span><b>✓</b> Antwort in 24 h</span>
         <span><b>✓</b> Transparente Angebote ohne Kleingedrucktes</span>
         <span><b>✓</b> Meisterbrief</span>
+      </div>
+    </div>
+    <div class="hero-visual reveal in d2">
+      <div class="hero-img">
+        <picture>
+          <source srcset="images/louis-babel-heizung-portrait.webp" type="image/webp">
+          <img src="images/louis-babel-heizung-portrait.jpg" alt="Louis Babel bei der Wartung einer Heizungsanlage" width="1200" height="1600" fetchpriority="high">
+        </picture>
       </div>
     </div>
   </div>
@@ -369,7 +380,10 @@ footer a:hover{color:var(--kupfer-hell)}
 <section class="why" id="warum">
   <div class="wrap">
     <div class="why-img reveal-l">
-      <div class="img-placeholder">FOTO: LOUIS BABEL<br>BEI DER BERATUNG / VOR ORT</div>
+      <picture>
+        <source srcset="images/louis-babel-transporter.webp" type="image/webp">
+        <img src="images/louis-babel-transporter.jpg" alt="Louis Babel, Installateur- und Heizungsbauermeister, vor seinem Firmenfahrzeug in Anzing" width="1200" height="1536" loading="lazy">
+      </picture>
     </div>
     <div>
       <span class="kicker reveal">Über uns</span>
