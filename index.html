@@ -502,29 +502,31 @@ footer a:hover{color:var(--kupfer-hell)}
         <li class="reveal d4"><div class="c-ic"><svg fill="none" stroke-width="1.6" viewBox="0 0 24 24"><path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke-linecap="round"/></svg></div><div><span>Erreichbarkeit</span>Termine nach Vereinbarung</div></li>
       </ul>
     </div>
-    <form class="reveal-r" onsubmit="event.preventDefault();alert('Vielen Dank! Wir melden uns innerhalb von 24 Stunden bei Ihnen.');">
+    <form class="reveal-r" name="anfrage" method="POST" action="/danke.html" data-netlify="true" netlify-honeypot="firma" enctype="multipart/form-data">
+      <input type="hidden" name="form-name" value="anfrage">
+      <p class="hp" style="display:none"><label>Firma<input name="firma" tabindex="-1" autocomplete="off"></label></p>
       <h3>Unverbindliche Anfrage</h3>
       <p class="form-sub">Kostenlos &amp; ohne Verpflichtung. Antwort innerhalb von 24 h an Werktagen.</p>
       <div class="f-row">
-        <div><label>Name*</label><input required placeholder="Max Mustermann"></div>
-        <div><label>Telefon*</label><input required type="tel" placeholder="0170 1234567"></div>
+        <div><label for="f-name">Name*</label><input id="f-name" name="name" required placeholder="Max Mustermann"></div>
+        <div><label for="f-tel">Telefon*</label><input id="f-tel" name="telefon" required type="tel" placeholder="0170 1234567"></div>
       </div>
       <div class="f-row">
-        <div><label>E-Mail</label><input type="email" placeholder="max@beispiel.de"></div>
-        <div><label>Ort</label><input placeholder="85646 Anzing"></div>
+        <div><label for="f-mail">E-Mail</label><input id="f-mail" name="email" type="email" placeholder="max@beispiel.de"></div>
+        <div><label for="f-ort">Ort</label><input id="f-ort" name="ort" placeholder="85646 Anzing"></div>
       </div>
       <div class="f-row">
-        <div><label>Gewünschte Leistung</label>
-          <select><option>Bitte wählen …</option><option>Heizung / Modernisierung</option><option>Wärmepumpe</option><option>Bad &amp; Sanitär</option><option>Lüftung</option><option>Wartung / Kundendienst</option><option>Reparatur</option></select></div>
-        <div><label>Projektart</label>
-          <select><option>Bitte wählen …</option><option>Neubau</option><option>Sanierung</option><option>Reparatur</option></select></div>
+        <div><label for="f-leistung">Gewünschte Leistung</label>
+          <select id="f-leistung" name="leistung"><option value="">Bitte wählen …</option><option>Heizung / Modernisierung</option><option>Wärmepumpe</option><option>Bad &amp; Sanitär</option><option>Lüftung</option><option>Wartung / Kundendienst</option><option>Reparatur</option></select></div>
+        <div><label for="f-projekt">Projektart</label>
+          <select id="f-projekt" name="projektart"><option value="">Bitte wählen …</option><option>Neubau</option><option>Sanierung</option><option>Reparatur</option></select></div>
       </div>
-      <label>Kurze Beschreibung</label>
-      <textarea rows="4" placeholder="Z. B.: Ölheizung von 2003, Einfamilienhaus 160 m², Interesse an Wärmepumpe …"></textarea>
-      <label>Fotos anhängen (optional – hilft uns bei der Einschätzung)</label>
-      <input type="file" multiple accept="image/*">
-      <label>Bevorzugte Kontaktart</label>
-      <select><option>Telefon</option><option>WhatsApp</option><option>E-Mail</option></select>
+      <label for="f-text">Kurze Beschreibung</label>
+      <textarea id="f-text" name="beschreibung" rows="4" placeholder="Z. B.: Ölheizung von 2003, Einfamilienhaus 160 m², Interesse an Wärmepumpe …"></textarea>
+      <label for="f-foto">Foto anhängen (optional – hilft uns bei der Einschätzung, max. 8 MB)</label>
+      <input id="f-foto" name="foto" type="file" accept="image/*">
+      <label for="f-kontakt">Bevorzugte Kontaktart</label>
+      <select id="f-kontakt" name="kontaktart"><option>Telefon</option><option>WhatsApp</option><option>E-Mail</option></select>
       <button class="btn btn-primary" type="submit">Kostenlose Erstberatung anfragen <span class="arr">→</span></button>
       <p class="f-hint">Mit dem Absenden stimmen Sie der Verarbeitung Ihrer Daten gemäß unserer Datenschutzerklärung zu.</p>
     </form>
