@@ -10,6 +10,11 @@
 <meta property="og:description" content="Heizung, Wärmepumpe, Bad und Lüftung vom Meisterbetrieb in Anzing. Kostenlose Erstberatung, transparentes Angebot, saubere Umsetzung.">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="de_DE">
+<meta property="og:image" content="https://www.heizungsbau-babel.de/images/og-heizungsbau-babel.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://www.heizungsbau-babel.de/images/og-heizungsbau-babel.jpg">
 <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
@@ -172,6 +177,17 @@ nav a:hover::after{width:100%}
 .ref-grid-4 .ref-wide .ref-img img{width:100%;height:100%;object-fit:cover}
 .ba-label{position:absolute;left:12px;top:12px;background:rgba(19,31,56,.78);color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.12em;padding:5px 10px;border-radius:100px;z-index:2}
 .ba-label.after{background:var(--kupfer)}
+.ratgeber{background:var(--grau)}
+.blog-list{display:grid;grid-template-columns:repeat(2,1fr);gap:24px}
+.blog-card{border:1px solid var(--linie);border-radius:var(--radius);overflow:hidden;background:#fff;text-decoration:none;color:inherit;display:grid;grid-template-columns:190px 1fr;transition:transform .4s var(--ease),box-shadow .4s var(--ease)}
+.blog-card:hover{transform:translateY(-6px);box-shadow:0 24px 60px rgba(19,31,56,.12)}
+.blog-card picture,.blog-card img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 30%}
+.blog-card picture{min-height:190px}
+.blog-card div{padding:22px 24px 26px}
+.blog-card h3{font-size:1.08rem;margin:8px 0 8px;color:var(--marine)}
+.blog-card p{font-size:.92rem;color:var(--text-soft)}
+.blog-card .kicker{margin-bottom:6px}
+
 .ref-grid-4 .ref-img{aspect-ratio:3/4}
 .ref-grid-4 .ref-body{padding:18px 20px 20px}
 .ref-grid-4 .ref-body h3{font-size:1rem;margin-bottom:4px}
@@ -261,6 +277,9 @@ footer a:hover{color:var(--kupfer-hell)}
   .cards,.ref-grid,.quotes{grid-template-columns:1fr}
   .ref-grid-4{grid-template-columns:1fr 1fr;gap:14px}
   .ref-grid-4 .ref-wide{grid-column:span 2}
+  .blog-list{grid-template-columns:1fr}
+  .blog-card{grid-template-columns:1fr}
+  .blog-card picture{aspect-ratio:16/8;min-height:0}
   .steps{grid-template-columns:1fr 1fr}
   .steps::before{display:none}
   .f-grid{grid-template-columns:1fr 1fr}
@@ -474,6 +493,28 @@ footer a:hover{color:var(--kupfer-hell)}
       <div class="quote reveal"><div class="stars">★★★★★</div><p>„Von der Beratung bis zur Übergabe alles top. Termine wurden eingehalten, die Baustelle war jeden Abend aufgeräumt."</p><b>Familie M.</b><small>Heizungstausch · Anzing</small></div>
       <div class="quote reveal d1"><div class="stars">★★★★★</div><p>„Endlich ein Handwerker, der erklärt, was er macht und warum. Die Wärmepumpe läuft seit einem Jahr einwandfrei."</p><b>H. K.</b><small>Wärmepumpe · Zorneding</small></div>
       <div class="quote reveal d2"><div class="stars">★★★★★</div><p>„Schnelle Hilfe, als die Heizung mitten im Winter ausfiel. Ehrliche Empfehlung statt teurem Schnellschuss."</p><b>S. B.</b><small>Reparatur · Vaterstetten</small></div>
+    </div>
+  </div>
+</section>
+
+<section class="ratgeber" id="ratgeber">
+  <div class="wrap">
+    <div class="sec-head">
+      <div>
+        <span class="kicker reveal">Ratgeber</span>
+        <h2 class="reveal">Was wir im Heizungskeller sehen – und was Sie darüber wissen sollten.</h2>
+      </div>
+      <a class="btn btn-ghost reveal" style="color:var(--marine);border-color:var(--marine)" href="/blog/">Alle Beiträge <span class="arr">→</span></a>
+    </div>
+    <div class="blog-list">
+      <a class="blog-card reveal" href="/blog/gasheizung-wartung/">
+        <picture><source srcset="images/blog-gasheizung-waermetauscher-ablagerungen.webp" type="image/webp"><img src="images/blog-gasheizung-waermetauscher-ablagerungen.jpg" alt="Wärmetauscher einer Gastherme mit Ablagerungen" loading="lazy" width="1000" height="1333"></picture>
+        <div><span class="kicker">Heizung &amp; Wartung</span><h3>Gasheizung warten: Was eine Therme nach Jahren ohne Wartung von innen zeigt</h3><p>Warum jährlich, was dabei wirklich gemacht wird – und was passiert, wenn man es auslässt.</p></div>
+      </a>
+      <a class="blog-card reveal d1" href="/blog/hauswasserfilter-trinkwasserhygiene/">
+        <picture><source srcset="images/blog-hauswasserfilter-bwt-modern.webp" type="image/webp"><img src="images/blog-hauswasserfilter-bwt-modern.jpg" alt="Moderner Hauswasserfilter mit Druckminderer" loading="lazy" width="1000" height="1333"></picture>
+        <div><span class="kicker">Trinkwasser &amp; Hygiene</span><h3>Hauswasserfilter warten: Sauberes Trinkwasser beginnt im eigenen Haus</h3><p>Wie oft rückspülen, wann den Einsatz wechseln, wann der Filter raus muss – und was passiert, wenn man ihn jahrelang ignoriert.</p></div>
+      </a>
     </div>
   </div>
 </section>
