@@ -20,6 +20,7 @@
 <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
+<script src="/consent.js" defer></script>
 <meta name="robots" content="noindex, follow">
 <style>
 :root{
@@ -347,6 +348,16 @@ footer a:hover{color:var(--kupfer-hell)}
 .blog-card h3{font-size:1.12rem;margin:8px 0 8px;color:var(--marine)}
 .blog-card p{font-size:.92rem;color:var(--text-soft)}
 @media(max-width:700px){.figgrid,.blog-list{grid-template-columns:1fr}.blog-card{grid-template-columns:1fr}.blog-card picture{aspect-ratio:16/8;min-height:0}.cta-box{padding:34px 22px}.author{flex-direction:column;align-items:flex-start}}
+
+#hb-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:300;display:flex;justify-content:center;pointer-events:none}
+#hb-consent .hbc-box{pointer-events:auto;max-width:720px;width:100%;background:#fff;border:1px solid var(--linie);border-radius:18px;box-shadow:0 24px 70px rgba(19,31,56,.22);padding:20px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+#hb-consent p{margin:0;flex:1 1 360px;font-size:.92rem;line-height:1.55;color:var(--text)}
+#hb-consent a{color:var(--blau)}
+#hb-consent .hbc-btns{display:flex;gap:10px;flex:0 0 auto}
+#hb-consent button{font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;padding:11px 18px;border-radius:100px;cursor:pointer;border:1.5px solid var(--marine)}
+#hb-consent .hbc-accept{background:var(--kupfer);border-color:var(--kupfer);color:#fff}
+#hb-consent .hbc-decline{background:#fff;color:var(--marine)}
+@media(max-width:700px){#hb-consent{bottom:84px}#hb-consent .hbc-btns{width:100%}#hb-consent button{flex:1}}
 </style>
 </head>
 <body>
@@ -382,7 +393,7 @@ footer a:hover{color:var(--kupfer-hell)}
   <div class="wrap">
     <span class="kicker">Rechtliches</span>
     <h1>Datenschutzerklärung</h1>
-    <p class="stand">Stand: November 2026</p>
+    <p class="stand">Stand: 7. November 2026</p>
 
     <p>Wir freuen uns über Ihren Besuch auf unserer Website. Der Schutz Ihrer personenbezogenen Daten ist uns wichtig. Nachfolgend informieren wir Sie darüber, welche Daten wir bei der Nutzung dieser Website verarbeiten, zu welchem Zweck und auf welcher Rechtsgrundlage.</p>
 
@@ -413,8 +424,11 @@ footer a:hover{color:var(--kupfer-hell)}
     <p>Die auf der Website verwendeten Schriftarten (Inter, Manrope) sind lokal auf unserem Server gespeichert; es findet keine Verbindung zu Servern von Google statt.</p>
     <p>Die Adressangabe im Kontaktbereich verlinkt auf Google Maps. Eine Datenübermittlung an Google findet erst statt, wenn Sie den Link anklicken.</p>
 
-    <h2>6. Cookies und Reichweitenmessung</h2>
-    <p>Diese Website setzt keine Cookies ein und verwendet keine Analyse- oder Tracking-Dienste. Es werden keine Nutzerprofile erstellt. Aus diesem Grund ist kein Cookie-Banner erforderlich.</p>
+    <h2>6. Cookies, Google Tag Manager und Google Analytics (nur mit Ihrer Einwilligung)</h2>
+    <p>Beim ersten Besuch fragen wir Sie über ein Banner, ob wir die Nutzung unserer Website messen dürfen. <b>Ohne Ihre Zustimmung werden keine Cookies gesetzt und keine Daten an Google übermittelt</b>; die Website funktioniert vollständig auch ohne Zustimmung. Ihre Entscheidung speichern wir lokal in Ihrem Browser (localStorage, Schlüssel „hb_consent_v1"). Sie können sie jederzeit über den Link „Cookie-Einstellungen" im Fußbereich ändern oder widerrufen.</p>
+    <p>Wenn Sie zustimmen, laden wir den <b>Google Tag Manager</b> und darüber <b>Google Analytics 4</b> der Google Ireland Limited, Gordon House, Barrow Street, Dublin 4, Irland. Google Analytics verwendet Cookies (u. a. „_ga", Laufzeit bis zu 2 Jahre) und erfasst Seitenaufrufe, ungefähren Standort (auf Basis der gekürzten IP-Adresse), Gerät und Browser, Verweildauer sowie Interaktionen wie Klicks auf WhatsApp- und Telefon-Links und das Absenden des Kontaktformulars. Daraus erstellt Google pseudonyme Nutzungsstatistiken für uns. Wir haben Google Consent Mode v2 eingerichtet, die Google-Signale-Funktion ist deaktiviert und die Datenaufbewahrung auf 14 Monate begrenzt.</p>
+    <p>Rechtsgrundlage ist Ihre Einwilligung nach Art. 6 Abs. 1 lit. a DSGVO und § 25 Abs. 1 TDDDG. Die Daten können auf Server von Google LLC in den USA übertragen werden; Google ist nach dem EU-U.S. Data Privacy Framework zertifiziert, zusätzlich gelten die Standardvertragsklauseln. Mit Google besteht ein Auftragsverarbeitungsvertrag. Weitere Informationen: <a href="https://policies.google.com/privacy?hl=de" rel="noopener">policies.google.com/privacy</a> und <a href="https://support.google.com/analytics/answer/6004245?hl=de" rel="noopener">Datenschutz bei Google Analytics</a>. Sie können die Erfassung außerdem über das <a href="https://tools.google.com/dlpage/gaoptout?hl=de" rel="noopener">Browser-Add-on zur Deaktivierung von Google Analytics</a> verhindern.</p>
+    <p>Andere Analyse-, Werbe- oder Social-Media-Dienste setzen wir nicht ein.</p>
 
     <h2>7. Speicherdauer</h2>
     <p>Wir speichern personenbezogene Daten nur so lange, wie es für den jeweiligen Zweck erforderlich ist. Anfragen, aus denen kein Auftrag entsteht, löschen wir in der Regel nach sechs Monaten. Daten, die im Rahmen eines Auftrags verarbeitet werden, unterliegen den gesetzlichen Aufbewahrungsfristen (sechs bzw. zehn Jahre nach HGB und AO).</p>
@@ -451,7 +465,7 @@ footer a:hover{color:var(--kupfer-hell)}
       <div><h4>Kontakt</h4><ul><li><a href="https://wa.me/4915738803691">WhatsApp</a></li><li><a href="mailto:info@heizungsbau-babel.de">info@heizungsbau-babel.de</a></li><li><a href="tel:+4915738803691">0157 38803691</a></li></ul></div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 Louis Babel Heizungsbau · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></span>
+      <span>© 2026 Louis Babel Heizungsbau · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="#" onclick="hbOpenConsent();return false">Cookie-Einstellungen</a></span>
       <span class="f-claim"><b>Qualität</b> im Detail. <b>Effizienz</b> im Ergebnis.</span>
     </div>
   </div>

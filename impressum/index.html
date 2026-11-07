@@ -20,6 +20,7 @@
 <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
+<script src="/consent.js" defer></script>
 <meta name="robots" content="noindex, follow">
 <style>
 :root{
@@ -347,6 +348,16 @@ footer a:hover{color:var(--kupfer-hell)}
 .blog-card h3{font-size:1.12rem;margin:8px 0 8px;color:var(--marine)}
 .blog-card p{font-size:.92rem;color:var(--text-soft)}
 @media(max-width:700px){.figgrid,.blog-list{grid-template-columns:1fr}.blog-card{grid-template-columns:1fr}.blog-card picture{aspect-ratio:16/8;min-height:0}.cta-box{padding:34px 22px}.author{flex-direction:column;align-items:flex-start}}
+
+#hb-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:300;display:flex;justify-content:center;pointer-events:none}
+#hb-consent .hbc-box{pointer-events:auto;max-width:720px;width:100%;background:#fff;border:1px solid var(--linie);border-radius:18px;box-shadow:0 24px 70px rgba(19,31,56,.22);padding:20px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+#hb-consent p{margin:0;flex:1 1 360px;font-size:.92rem;line-height:1.55;color:var(--text)}
+#hb-consent a{color:var(--blau)}
+#hb-consent .hbc-btns{display:flex;gap:10px;flex:0 0 auto}
+#hb-consent button{font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;padding:11px 18px;border-radius:100px;cursor:pointer;border:1.5px solid var(--marine)}
+#hb-consent .hbc-accept{background:var(--kupfer);border-color:var(--kupfer);color:#fff}
+#hb-consent .hbc-decline{background:#fff;color:var(--marine)}
+@media(max-width:700px){#hb-consent{bottom:84px}#hb-consent .hbc-btns{width:100%}#hb-consent button{flex:1}}
 </style>
 </head>
 <body>
@@ -435,7 +446,7 @@ footer a:hover{color:var(--kupfer-hell)}
       <div><h4>Kontakt</h4><ul><li><a href="https://wa.me/4915738803691">WhatsApp</a></li><li><a href="mailto:info@heizungsbau-babel.de">info@heizungsbau-babel.de</a></li><li><a href="tel:+4915738803691">0157 38803691</a></li></ul></div>
     </div>
     <div class="f-bottom">
-      <span>© 2026 Louis Babel Heizungsbau · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a></span>
+      <span>© 2026 Louis Babel Heizungsbau · <a href="/impressum/">Impressum</a> · <a href="/datenschutz/">Datenschutz</a> · <a href="#" onclick="hbOpenConsent();return false">Cookie-Einstellungen</a></span>
       <span class="f-claim"><b>Qualität</b> im Detail. <b>Effizienz</b> im Ergebnis.</span>
     </div>
   </div>

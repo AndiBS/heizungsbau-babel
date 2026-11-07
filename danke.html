@@ -13,6 +13,7 @@
 <link rel="preload" href="/fonts/manrope-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="/fonts/inter-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="/fonts/fonts.css">
+<script src="/consent.js" defer></script>
 <style>
 :root{--marine:#1B2B4D;--marine-dark:#131F38;--marine-soft:#24406E;--kupfer:#C97C4A;--kupfer-hell:#E8A87C;--kupfer-dunkel:#B36A3C;--weiss:#FFFFFF}
 *{box-sizing:border-box;margin:0;padding:0}
@@ -31,6 +32,16 @@ p{font-size:1.1rem;line-height:1.65;color:#BECDDD;margin-bottom:34px}
 .btn-primary:hover{background:var(--kupfer-dunkel);transform:translateY(-2px)}
 .btn-ghost{color:#fff;border:1.5px solid rgba(255,255,255,.35)}
 .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+#hb-consent{position:fixed;left:16px;right:16px;bottom:16px;z-index:300;display:flex;justify-content:center;pointer-events:none}
+#hb-consent .hbc-box{pointer-events:auto;max-width:720px;width:100%;background:#fff;border:1px solid var(--linie);border-radius:18px;box-shadow:0 24px 70px rgba(19,31,56,.22);padding:20px 22px;display:flex;gap:18px;align-items:center;flex-wrap:wrap}
+#hb-consent p{margin:0;flex:1 1 360px;font-size:.92rem;line-height:1.55;color:var(--text)}
+#hb-consent a{color:var(--blau)}
+#hb-consent .hbc-btns{display:flex;gap:10px;flex:0 0 auto}
+#hb-consent button{font-family:'Manrope',sans-serif;font-weight:700;font-size:.9rem;padding:11px 18px;border-radius:100px;cursor:pointer;border:1.5px solid var(--marine)}
+#hb-consent .hbc-accept{background:var(--kupfer);border-color:var(--kupfer);color:#fff}
+#hb-consent .hbc-decline{background:#fff;color:var(--marine)}
+@media(max-width:700px){#hb-consent{bottom:84px}#hb-consent .hbc-btns{width:100%}#hb-consent button{flex:1}}
 </style>
 </head>
 <body>
