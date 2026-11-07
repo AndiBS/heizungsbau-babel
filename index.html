@@ -165,7 +165,13 @@ nav a:hover::after{width:100%}
 .ref-body h3{font-size:1.08rem;margin-bottom:8px}
 .ref-body p{font-size:.9rem;color:var(--text-soft)}
 .ref-body em{color:var(--kupfer);font-style:normal;font-weight:600}
-.ref-grid-4{grid-template-columns:repeat(4,1fr);gap:20px}
+.ref-grid-4{grid-template-columns:repeat(3,1fr);gap:20px}
+.ref-grid-4 .ref-wide{grid-column:span 2}
+.ref-grid-4 .ref-wide .ref-img{aspect-ratio:auto;display:grid;grid-template-columns:1fr 1fr;gap:4px}
+.ref-grid-4 .ref-wide .ref-img picture{position:relative;aspect-ratio:3/4;display:block;overflow:hidden}
+.ref-grid-4 .ref-wide .ref-img img{width:100%;height:100%;object-fit:cover}
+.ba-label{position:absolute;left:12px;top:12px;background:rgba(19,31,56,.78);color:#fff;font-family:'Manrope',sans-serif;font-weight:700;font-size:.68rem;letter-spacing:.12em;padding:5px 10px;border-radius:100px;z-index:2}
+.ba-label.after{background:var(--kupfer)}
 .ref-grid-4 .ref-img{aspect-ratio:3/4}
 .ref-grid-4 .ref-body{padding:18px 20px 20px}
 .ref-grid-4 .ref-body h3{font-size:1rem;margin-bottom:4px}
@@ -254,6 +260,7 @@ footer a:hover{color:var(--kupfer-hell)}
   .stat{border:none;padding:16px}
   .cards,.ref-grid,.quotes{grid-template-columns:1fr}
   .ref-grid-4{grid-template-columns:1fr 1fr;gap:14px}
+  .ref-grid-4 .ref-wide{grid-column:span 2}
   .steps{grid-template-columns:1fr 1fr}
   .steps::before{display:none}
   .f-grid{grid-template-columns:1fr 1fr}
@@ -428,10 +435,17 @@ footer a:hover{color:var(--kupfer-hell)}
     <div class="sec-head">
       <div>
         <span class="kicker reveal">Kleinigkeiten</span>
-        <h2 class="reveal">Auch die kleinen Dinge, die den Alltag schöner machen.</h2>
+        <h2 class="reveal">Auch kleine Dinge können jeden Tag eine Freude machen.</h2>
       </div>
     </div>
     <div class="ref-grid ref-grid-4">
+      <div class="ref ref-wide reveal">
+        <div class="ref-img">
+          <picture><span class="ba-label">Vorher</span><source srcset="images/projekt-dusche-vorher-vorhang.webp" type="image/webp"><img src="images/projekt-dusche-vorher-vorhang.jpg" alt="Duschwanne mit Duschvorhang an Rundstange – vor dem Umbau" loading="lazy" width="594" height="1200"></picture>
+          <picture><span class="ba-label after">Nachher</span><source srcset="images/projekt-dusche-nachher-glaswand.webp" type="image/webp"><img src="images/projekt-dusche-nachher-glaswand.jpg" alt="Dieselbe Dusche mit Echtglas-Duschabtrennung und neuer Brausegarnitur – nach dem Umbau" loading="lazy" width="658" height="1200"></picture>
+        </div>
+        <div class="ref-body"><span class="tag">DUSCHE</span><h3>Glaswand statt Duschvorhang</h3><p>Echtglas-Abtrennung mit Pendeltür und neuer Brausegarnitur – an einem Vormittag montiert, ohne eine Fliese anzufassen.</p></div>
+      </div>
       <div class="ref reveal">
         <div class="ref-img"><picture><source srcset="images/projekt-aussendusche-laerchenholz.webp" type="image/webp"><img src="images/projekt-aussendusche-laerchenholz.jpg" alt="Außendusche mit schwarzer Armatur an einer Lärchenholz-Fassade" loading="lazy" width="898" height="1200"></picture></div>
         <div class="ref-body"><span class="tag">AUSSENDUSCHE</span><h3>Dusche an der Gartenhütte</h3><p>Schwarze Armatur, Brausestange und Handbrause – frostsicher angeschlossen an der Lärchenfassade.</p></div>
