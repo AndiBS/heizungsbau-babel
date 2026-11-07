@@ -22,7 +22,10 @@
     s.async = true;
     s.src = 'https://www.googletagmanager.com/gtm.js?id=' + GTM_ID;
     document.head.appendChild(s);
+    // gepufferte Events nachreichen, sobald der Container steht
+    s.addEventListener('load', function () { pending.forEach(function (e) { dataLayer.push(e); }); pending = []; });
   }
+  var pending = [];
 
   function hide() { var b = document.getElementById('hb-consent'); if (b) b.remove(); }
 
@@ -46,7 +49,10 @@
   }
 
   // Events in den dataLayer (werden nur verarbeitet, wenn GTM geladen ist)
-  function track(name, label) { dataLayer.push({ event: name, label: label || '' }); }
+  function track(name, label) {
+    var e = { event: name, label: label || '' };
+    if (window.google_tag_manager && window.google_tag_manager[GTM_ID]) dataLayer.push(e); else pending.push(e);
+  }
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href]');
     if (!a) return;
