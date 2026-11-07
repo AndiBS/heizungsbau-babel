@@ -165,6 +165,11 @@ nav a:hover::after{width:100%}
 .ref-body h3{font-size:1.08rem;margin-bottom:8px}
 .ref-body p{font-size:.9rem;color:var(--text-soft)}
 .ref-body em{color:var(--kupfer);font-style:normal;font-weight:600}
+.ref-grid-4{grid-template-columns:repeat(4,1fr);gap:20px}
+.ref-grid-4 .ref-img{aspect-ratio:3/4}
+.ref-grid-4 .ref-body{padding:18px 20px 20px}
+.ref-grid-4 .ref-body h3{font-size:1rem;margin-bottom:4px}
+.ref-grid-4 .ref-body p{font-size:.86rem}
 
 /* Stimmen */
 .quotes-sec{background:var(--grau)}
@@ -246,6 +251,7 @@ footer a:hover{color:var(--kupfer-hell)}
   .stats .wrap{grid-template-columns:1fr 1fr}
   .stat{border:none;padding:16px}
   .cards,.ref-grid,.quotes{grid-template-columns:1fr}
+  .ref-grid-4{grid-template-columns:1fr 1fr;gap:14px}
   .steps{grid-template-columns:1fr 1fr}
   .steps::before{display:none}
   .f-grid{grid-template-columns:1fr 1fr}
@@ -273,6 +279,7 @@ footer a:hover{color:var(--kupfer-hell)}
       <ul>
         <li><a href="#leistungen">Leistungen</a></li>
         <li><a href="#warum">Über uns</a></li>
+        <li><a href="#referenzen">Projekte</a></li>
         <li><a href="#faq">FAQ</a></li>
         <li><a href="#kontakt">Kontakt</a></li>
       </ul>
@@ -412,26 +419,30 @@ footer a:hover{color:var(--kupfer-hell)}
   </div>
 </section>
 
-<section class="refs" id="referenzen" hidden style="display:none">
+<section class="refs" id="referenzen">
   <div class="wrap">
     <div class="sec-head">
       <div>
-        <span class="kicker reveal">Projekte aus der Region</span>
-        <h2 class="reveal">So sieht das aus, wenn wir fertig sind.</h2>
+        <span class="kicker reveal">Kleinigkeiten</span>
+        <h2 class="reveal">Auch die kleinen Dinge, die den Alltag schöner machen.</h2>
       </div>
     </div>
-    <div class="ref-grid">
+    <div class="ref-grid ref-grid-4">
       <div class="ref reveal">
-        <div class="ref-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GN2JksiRWVOxxMEvUlyAlTTSpt/hf_20260801_084157_c2cf1325-0bc2-4578-be66-a39f256a14f0_min.webp" alt="Wärmepumpen-Installation an einem Einfamilienhaus im Landkreis Ebersberg" loading="lazy"></div>
-        <div class="ref-body"><span class="tag">WÄRMEPUMPE</span><h3>Öl raus, Wärmepumpe rein</h3><p>Komplettumstellung inkl. hydraulischem Abgleich und Förderbegleitung – <em>in 5 Arbeitstagen</em>. Anzing.</p></div>
+        <div class="ref-img"><picture><source srcset="images/projekt-aussendusche-laerchenholz.webp" type="image/webp"><img src="images/projekt-aussendusche-laerchenholz.jpg" alt="Außendusche mit schwarzer Armatur an einer Lärchenholz-Fassade" loading="lazy" width="898" height="1200"></picture></div>
+        <div class="ref-body"><span class="tag">AUSSENDUSCHE</span><h3>Dusche an der Gartenhütte</h3><p>Schwarze Armatur, Brausestange und Handbrause – frostsicher angeschlossen an der Lärchenfassade.</p></div>
       </div>
       <div class="ref reveal d1">
-        <div class="ref-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GN2JksiRWVOxxMEvUlyAlTTSpt/hf_20260801_083709_de2ba7c3-9135-4ad9-80d5-0c117eaa5928_min.webp" alt="Modernisiertes Badezimmer mit bodengleicher Dusche – Badsanierung bei Poing" loading="lazy"></div>
-        <div class="ref-body"><span class="tag">BADSANIERUNG</span><h3>Familienbad, komplett neu</h3><p>Bodengleiche Dusche, neue Sanitärtechnik, alle Gewerke koordiniert – <em>übergeben nach 3 Wochen</em>. Poing.</p></div>
+        <div class="ref-img"><picture><source srcset="images/projekt-gartendusche-schwarz.webp" type="image/webp"><img src="images/projekt-gartendusche-schwarz.jpg" alt="Freistehende schwarze Gartendusche vor einer Hecke" loading="lazy" width="900" height="1200"></picture></div>
+        <div class="ref-body"><span class="tag">GARTENDUSCHE</span><h3>Freistehend am Pool</h3><p>Standdusche mit Kopf- und Handbrause – unsichtbar verrohrt, im Winter einfach entleert.</p></div>
       </div>
       <div class="ref reveal d2">
-        <div class="ref-img"><img src="https://d8j0ntlcm91z4.cloudfront.net/user_3GN2JksiRWVOxxMEvUlyAlTTSpt/hf_20260801_083711_e63b5b98-cc9b-4b8f-aeca-e0d26c356fb5_min.webp" alt="Modernisierte Heizzentrale mit sauberer Kupfer-Verrohrung – Heizungsmodernisierung Markt Schwaben" loading="lazy"></div>
-        <div class="ref-body"><span class="tag">HEIZUNGSMODERNISIERUNG</span><h3>Neue Heizzentrale im Mehrfamilienhaus</h3><p>Effiziente Technik mit smarter Regelung für sechs Wohneinheiten – <em>ohne einen Tag Heizungsausfall</em>. Markt Schwaben.</p></div>
+        <div class="ref-img"><picture><source srcset="images/projekt-gartenwaschbecken-granit-messing.webp" type="image/webp"><img src="images/projekt-gartenwaschbecken-granit-messing.jpg" alt="Granit-Waschbecken mit Messing-Wandauslauf an einer Holzfassade im Garten" loading="lazy" width="900" height="1200"></picture></div>
+        <div class="ref-body"><span class="tag">GARTENBECKEN</span><h3>Granitbecken mit Messingauslauf</h3><p>Wasserstelle im Garten – Hände waschen, Gemüse putzen, Gießkanne füllen.</p></div>
+      </div>
+      <div class="ref reveal d3">
+        <div class="ref-img"><picture><source srcset="images/projekt-waschtisch-aufsatzbecken-schwarz.webp" type="image/webp"><img src="images/projekt-waschtisch-aufsatzbecken-schwarz.jpg" alt="Schwarzes Aufsatzwaschbecken auf Steinplatte vor Wandfliesen in Rostoptik" loading="lazy" width="898" height="1200"></picture></div>
+        <div class="ref-body"><span class="tag">GÄSTE-WC</span><h3>Aufsatzbecken auf Steinplatte</h3><p>Schwarzes Becken, hohe Armatur, Fliesen in Rostoptik – montiert auf Maß.</p></div>
       </div>
     </div>
   </div>
